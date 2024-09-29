@@ -1,1 +1,1 @@
-# holbertonschool-web_react
+# Holberton Web React Repo
