@@ -1,22 +1,23 @@
-interface Student {
-    firstName: string
-    lastName: string
-    age: number
-    location: string
+interface MajorCredits {
+    credits: number;
+    brand: string; // Unique identifier for MajorCredits
 }
 
-const student1: Student = {
-    firstName: 'John',
-    lastName: 'Doe',
-    age: 20,
-    location: 'New York',
-};
+interface MinorCredits {
+    credits: number;
+    brand: string; // Unique identifier for MinorCredits
+}
 
-const student2: Student = {
-    firstName: 'Jane',
-    lastName: 'Smith',
-    age: 25,
-    location: 'Los Angeles',
-};
+function sumMajorCredits(subject1: MajorCredits, subject2: MajorCredits): MajorCredits {
+    return {
+        credits: subject1.credits + subject2.credits,
+        brand: subject1.brand // Assuming brand is the same for both subjects
+    };
+}
 
-const studentsList: Array<Student> = [student1, student2];
+function sumMinorCredits(subject1: MinorCredits, subject2: MinorCredits): MinorCredits {
+    return {
+        credits: subject1.credits + subject2.credits,
+        brand: subject1.brand // Assuming brand is the same for both subjects
+    };
+}
